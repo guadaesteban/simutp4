@@ -5,8 +5,15 @@ import java.util.List;
 
 public class Simulacion {
     private List<Servicio> servicios;
+    private int cantidadSimulaciones;
+    private int desde;
+    private int hasta;
 
-    public Simulacion() {
+
+    public Simulacion(int cantidadSimulaciones, int desde, int hasta) {
+        this.cantidadSimulaciones = cantidadSimulaciones;
+        this.desde = desde;
+        this.hasta = hasta;
         servicios = new ArrayList<>();
         inicializarServicios();
     }
@@ -21,5 +28,18 @@ public class Simulacion {
 
     public List<Servicio> getServicios() {
         return servicios;
+    }
+
+    // Métodos para acceder a los parámetros pasados
+    public int getCantidadSimulaciones() {
+        return cantidadSimulaciones;
+    }
+
+    public int getDesde() {
+        return desde;
+    }
+
+    public int getHasta() {
+        return hasta;
     }
 }
