@@ -2,18 +2,35 @@ package org.example;
 
 public class Servicio {
     private String tipo;
-    private int nroServidores;
+    private Servidor[] servidores;
     private double tasaLlegada;
     private double tasaServicio;
     private int cola;
+    private double tiempoOcupado;
+    private double tiempoTotal;
 
 
-    public Servicio(String tipo, int nroServidores, double tasaLlegada, double tasaServicio, int cola) {
+    public Servicio(String tipo, int nroServidores, double tasaLlegada, double tasaServicio) {
         this.tipo = tipo;
-        this.nroServidores = nroServidores;
+        this.servidores = new Servidor[nroServidores];
+        for (int i = 0; i < nroServidores; i++) {
+            this.servidores[i] = new Servidor();
+            this.servidores[i].setNro(i + 1);
+            this.servidores[i].setEstado("libre");
+        }
         this.tasaLlegada = tasaLlegada;
         this.tasaServicio = tasaServicio;
-        this.cola = cola;
+        this.cola = 0;
+        this.tiempoOcupado = 0.0;
+        this.tiempoTotal = 0.0;
+    }
+
+    public Servidor[] getServidores() {
+        return servidores;
+    }
+
+    public void setServidores(Servidor[] servidores) {
+        this.servidores = servidores;
     }
 
     public String getTipo() {
@@ -22,14 +39,6 @@ public class Servicio {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
-    }
-
-    public int getNroServidores() {
-        return nroServidores;
-    }
-
-    public void setNroServidores(int nroServidores) {
-        this.nroServidores = nroServidores;
     }
 
     public double getTasaLlegada() {
@@ -54,5 +63,21 @@ public class Servicio {
 
     public void setCola(int cola) {
         this.cola = cola;
+    }
+
+    public double getTiempoOcupado() {
+        return tiempoOcupado;
+    }
+
+    public void setTiempoOcupado(double tiempoOcupado) {
+        this.tiempoOcupado = tiempoOcupado;
+    }
+
+    public double getTiempoTotal() {
+        return tiempoTotal;
+    }
+
+    public void setTiempoTotal(double tiempoTotal) {
+        this.tiempoTotal = tiempoTotal;
     }
 }

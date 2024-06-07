@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="500e125a-dbe8-4c52-9973-345e4bec4498" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/VentanaResultados.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/VentanaResultados.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Servidor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Servicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Servicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Simulacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Simulacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/VentanaDatos.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/VentanaDatos.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/VentanaDatos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/VentanaDatos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/VentanaResultados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/VentanaResultados.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,10 +43,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "112",
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "287",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "251",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/Usuario/Desktop/UTN/tp4sim"
   }

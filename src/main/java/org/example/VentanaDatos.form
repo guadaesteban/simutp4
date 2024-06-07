@@ -88,21 +88,25 @@
           <text value="Tasa llegada:"/>
         </properties>
       </component>
-      <component id="18134" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="18134" class="javax.swing.JTextField" binding="prestamoTLTextField">
         <constraints>
           <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="3"/>
+        </properties>
       </component>
-      <component id="35c86" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+      <component id="35c86" class="javax.swing.JTextField" binding="prestamoTSTextField">
         <constraints>
           <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="6"/>
+        </properties>
       </component>
       <component id="50a6b" class="javax.swing.JLabel">
         <constraints>
@@ -112,37 +116,45 @@
           <text value="Tasa servicio:"/>
         </properties>
       </component>
-      <component id="f13d4" class="javax.swing.JTextField" default-binding="true">
+      <component id="f13d4" class="javax.swing.JTextField" binding="devolucionTSTextField">
         <constraints>
           <grid row="6" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="5"/>
+        </properties>
       </component>
-      <component id="ab8" class="javax.swing.JTextField" default-binding="true">
+      <component id="ab8" class="javax.swing.JTextField" binding="consultaTLTextField">
         <constraints>
           <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="6"/>
+        </properties>
       </component>
-      <component id="94114" class="javax.swing.JTextField" default-binding="true">
+      <component id="94114" class="javax.swing.JTextField" binding="accesoPcTLTextField">
         <constraints>
           <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="7.5"/>
+        </properties>
       </component>
-      <component id="580ff" class="javax.swing.JTextField" default-binding="true">
+      <component id="580ff" class="javax.swing.JTextField" binding="infoTLTextField">
         <constraints>
           <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="2.4"/>
+        </properties>
       </component>
       <component id="973f0" class="javax.swing.JLabel">
         <constraints>
@@ -176,29 +188,35 @@
           <text value="Tasa servicio:"/>
         </properties>
       </component>
-      <component id="e3133" class="javax.swing.JTextField" default-binding="true">
+      <component id="e3133" class="javax.swing.JTextField" binding="consultaTSTextField">
         <constraints>
           <grid row="8" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="7.5"/>
+        </properties>
       </component>
-      <component id="c7f32" class="javax.swing.JTextField" default-binding="true">
+      <component id="c7f32" class="javax.swing.JTextField" binding="accesoPcTSTextField">
         <constraints>
           <grid row="10" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="12"/>
+        </properties>
       </component>
-      <component id="da83e" class="javax.swing.JTextField" default-binding="true">
+      <component id="da83e" class="javax.swing.JTextField" binding="infoTSTextField">
         <constraints>
           <grid row="12" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="4"/>
+        </properties>
       </component>
       <component id="eb52b" class="javax.swing.JLabel">
         <constraints>
@@ -216,13 +234,15 @@
           <text value="Tasa llegada:"/>
         </properties>
       </component>
-      <component id="4f272" class="javax.swing.JTextField" default-binding="true">
+      <component id="4f272" class="javax.swing.JTextField" binding="extraTLTextField">
         <constraints>
           <grid row="14" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="30"/>
+        </properties>
       </component>
       <component id="b5126" class="javax.swing.JLabel">
         <constraints>
@@ -232,13 +252,15 @@
           <text value="Tasa servicio:"/>
         </properties>
       </component>
-      <component id="6ec68" class="javax.swing.JTextField" default-binding="true">
+      <component id="6ec68" class="javax.swing.JTextField" binding="extraTSTextField">
         <constraints>
           <grid row="14" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="15"/>
+        </properties>
       </component>
       <component id="95f5f" class="javax.swing.JTextField" binding="hastaField">
         <constraints>
@@ -246,7 +268,9 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="10"/>
+        </properties>
       </component>
       <component id="b1b57" class="javax.swing.JTextField" binding="desdeField">
         <constraints>
@@ -254,7 +278,9 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="1"/>
+        </properties>
       </component>
       <component id="c7abc" class="javax.swing.JLabel">
         <constraints>
@@ -299,15 +325,19 @@
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="10"/>
+        </properties>
       </component>
-      <component id="d0031" class="javax.swing.JTextField" default-binding="true">
+      <component id="d0031" class="javax.swing.JTextField" binding="devolucionTLTextField">
         <constraints>
           <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <text value="4"/>
+        </properties>
       </component>
       <hspacer id="bbfec">
         <constraints>

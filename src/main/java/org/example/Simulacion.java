@@ -1,45 +1,87 @@
 package org.example;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Simulacion {
     private List<Servicio> servicios;
     private int cantidadSimulaciones;
     private int desde;
     private int hasta;
+    private double prestamoTL;
+    private double devolucionTL;
+    private double consultaTL;
+    private double accesoPcTL;
+    private double infoTL;
+    private double extraTL;
+    private double prestamoTS;
+    private double devolucionTS;
+    private double consultaTS;
+    private double accesoPcTS;
+    private double infoTS;
+    private double extraTS;
+    private List<Object[]> resultados;
 
-
-    public Simulacion(int cantidadSimulaciones, int desde, int hasta) {
+    public Simulacion(int cantidadSimulaciones, int desde, int hasta,
+                      double prestamoTL, double devolucionTL, double consultaTL, double accesoPcTL,
+                      double infoTL, double extraTL, double prestamoTS, double devolucionTS,
+                      double consultaTS, double accesoPcTS, double infoTS, double extraTS) {
         this.cantidadSimulaciones = cantidadSimulaciones;
         this.desde = desde;
         this.hasta = hasta;
+        this.prestamoTL = prestamoTL;
+        this.devolucionTL = devolucionTL;
+        this.consultaTL = consultaTL;
+        this.accesoPcTL = accesoPcTL;
+        this.infoTL = infoTL;
+        this.extraTL = extraTL;
+        this.prestamoTS = prestamoTS;
+        this.devolucionTS = devolucionTS;
+        this.consultaTS = consultaTS;
+        this.accesoPcTS = accesoPcTS;
+        this.infoTS = infoTS;
+        this.extraTS = extraTS;
         servicios = new ArrayList<>();
+        resultados = new ArrayList<>();
         inicializarServicios();
     }
 
     private void inicializarServicios() {
-        servicios.add(new Servicio("Préstamo de Libros", 3, 3, 6, 0));
-        servicios.add(new Servicio("Devolución de Libros", 2, 4, 5, 0));
-        servicios.add(new Servicio("Consulta en Sala", 2, 6, 7.5, 0));
-        servicios.add(new Servicio("Acceso a Computadoras", 1, 7.5, 12, 0));
-        servicios.add(new Servicio("Información General", 2, 2.4, 4, 0));
+        servicios.add(new Servicio("Préstamo de Libros", 3, prestamoTL, prestamoTS));
+        servicios.add(new Servicio("Devolución de Libros", 2, devolucionTL, consultaTL));
+        servicios.add(new Servicio("Consulta en Sala", 2, consultaTL, consultaTS));
+        servicios.add(new Servicio("Acceso a Computadoras", 1, accesoPcTL, accesoPcTS));
+        servicios.add(new Servicio("Información General", 2, infoTL, infoTS));
+        servicios.add(new Servicio("Servicio extra", 1, extraTL, extraTS));
+
     }
 
-    public List<Servicio> getServicios() {
-        return servicios;
+    public void simular(){
+        //fila 1 de inicializacion
+        String evento = "inicializacion";
+        double reloj = 0.0;
+        double rnd = Math.random();
+        Object tiempo = null;
+        double proxLlegada = rnd;
+
+        resultados.add(new Object[]{evento, reloj, rnd, tiempo, proxLlegada});
+
+        //List<double> llegada = new List<double>();
+
+        //llegada = simularPorServicio(rnd, tiempo, proxLlegada);
     }
 
-    // Métodos para acceder a los parámetros pasados
-    public int getCantidadSimulaciones() {
-        return cantidadSimulaciones;
+   // private List<Object> simularPorServicio(double rnd,double tiempo,double proxLlegada){
+
+   // }
+
+
+   // private double calcularProximoEvento(){    }
+
+    public List<Object[]> getResultados() {
+        return resultados;
     }
 
-    public int getDesde() {
-        return desde;
-    }
-
-    public int getHasta() {
-        return hasta;
-    }
 }
