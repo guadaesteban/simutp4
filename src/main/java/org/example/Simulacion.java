@@ -62,14 +62,29 @@ public class Simulacion {
         //fila 1 de inicializacion
         String evento = "inicializacion";
         double reloj = 0.0;
-        double rnd = Math.random();
-        Object tiempo = null;
-        double proxLlegada = rnd;
+        int cantServicios = 6;
+        double[] rndLlegadas = new double[cantServicios];
+        double[] proxLlegadas = new double[cantServicios];
+        Object[] rndServicio = new Object[cantServicios];
+        Object[] tiempo = new Object[cantServicios];
 
-        resultados.add(new Object[]{evento, reloj, rnd, tiempo, proxLlegada});
+        for (int i = 0; i < cantServicios; i++) {
+            rndLlegadas[i] = Math.random();
+            proxLlegadas[i] = rndLlegadas[i];
+            tiempo[i] = null;
+            rndServicio[i] = null;
+        }
+
+        resultados.add(new Object[]{evento, reloj,servicios, rndLlegadas, tiempo, proxLlegadas, rndServicio});
+
+        //for (int i=0; i < cantidadSimulaciones; i++){
+               //
+        //}
+
+
+
 
         //List<double> llegada = new List<double>();
-
         //llegada = simularPorServicio(rnd, tiempo, proxLlegada);
     }
 
@@ -77,11 +92,9 @@ public class Simulacion {
 
    // }
 
-
    // private double calcularProximoEvento(){    }
 
     public List<Object[]> getResultados() {
         return resultados;
     }
-
 }

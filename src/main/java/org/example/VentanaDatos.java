@@ -50,17 +50,6 @@ public class VentanaDatos extends JFrame {
                     double infoTS = Double.parseDouble(infoTSTextField.getText());
                     double extraTS = Double.parseDouble(extraTSTextField.getText());
 
-                    /*System.out.printf("Prestamo TL: %.2f%n", prestamoTL);
-                    System.out.printf("Consulta TL: %.2f%n", consultaTL);
-                    System.out.printf("Acceso PC TL: %.2f%n", accesoPcTL);
-                    System.out.printf("Info TL: %.2f%n", infoTL);
-                    System.out.printf("Extra TL: %.2f%n", extraTL);
-                    System.out.printf("Prestamo TS: %.2f%n", prestamoTS);
-                    System.out.printf("Devolucion TS: %.2f%n", devolucionTS);
-                    System.out.printf("Consulta TS: %.2f%n", consultaTS);
-                    System.out.printf("Acceso PC TS: %.2f%n", accesoPcTS);
-                    System.out.printf("Info TS: %.2f%n", infoTS);
-                    System.out.printf("Extra TS: %.2f%n", extraTS);*/
 
                     Simulacion simulacion = new Simulacion(cantidadSimulaciones, desde, hasta,
                             prestamoTL, devolucionTL, consultaTL, accesoPcTL, infoTL, extraTL,
