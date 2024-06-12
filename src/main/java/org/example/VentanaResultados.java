@@ -53,23 +53,32 @@ public class VentanaResultados extends JFrame {
         modelo = new DefaultTableModel(columnas, 0);
         tablaResultados.setModel(modelo);
 
-
         tablaResultados.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
 
-
-
         for (Object[] fila : simulacion.getResultados()) {
-            modelo.addRow(fila);
-        }
+            String evento = (String) fila[0];
+            double reloj = (double) fila[1];
+            double[][] llegadas = (double[][]) fila[2];
 
+            Object[] filaTabla = new Object[columnas.length];
+            filaTabla[0] = evento;
+            filaTabla[1] = reloj;
+
+            int colIndex = 2;
+            for (double[] llegada : llegadas) {
+                filaTabla[colIndex++] = llegada[0]; // RND
+                filaTabla[colIndex++] = llegada[1]; // Tiempo
+                filaTabla[colIndex++] = llegada[2]; // Próxima Llegada
+            }
+            modelo.addRow(filaTabla);
+        }
 
         scrollPane.setViewportView(tablaResultados);
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
         outputPanel.setLayout(new BorderLayout());
         outputPanel.add(scrollPane, BorderLayout.CENTER);
-
 
         setVisible(true);
     }

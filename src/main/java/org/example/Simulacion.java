@@ -68,7 +68,7 @@ public class Simulacion {
             llegadas[i] = calcularProximoEvento(reloj, servicios.get(i));
         }
 
-        resultados.add(new Object[]{evento, reloj, servicios, llegadas});
+        resultados.add(new Object[]{evento, reloj, llegadas});
 
     }
 
