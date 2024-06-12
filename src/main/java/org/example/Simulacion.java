@@ -1,9 +1,8 @@
 package org.example;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
 
 public class Simulacion {
     private List<Servicio> servicios;
@@ -62,37 +61,24 @@ public class Simulacion {
         //fila 1 de inicializacion
         String evento = "inicializacion";
         double reloj = 0.0;
-        int cantServicios = 6;
-        double[] rndLlegadas = new double[cantServicios];
-        double[] proxLlegadas = new double[cantServicios];
-        Object[] rndServicio = new Object[cantServicios];
-        Object[] tiempo = new Object[cantServicios];
+        int cantServicios = servicios.size();
+        double[][] llegadas = new double[cantServicios][3];
 
         for (int i = 0; i < cantServicios; i++) {
-            rndLlegadas[i] = Math.random();
-            proxLlegadas[i] = rndLlegadas[i];
-            tiempo[i] = null;
-            rndServicio[i] = null;
+            llegadas[i] = calcularProximoEvento(reloj, servicios.get(i));
         }
 
-        resultados.add(new Object[]{evento, reloj,servicios, rndLlegadas, tiempo, proxLlegadas, rndServicio});
+        resultados.add(new Object[]{evento, reloj, servicios, llegadas});
 
-        //for (int i=0; i < cantidadSimulaciones; i++){
-               //
-        //}
-
-
-
-
-        //List<double> llegada = new List<double>();
-        //llegada = simularPorServicio(rnd, tiempo, proxLlegada);
     }
 
-   // private List<Object> simularPorServicio(double rnd,double tiempo,double proxLlegada){
+   private double[] calcularProximoEvento(double reloj, Servicio servicio){
+        double rnd = Math.random();
+        double tiempo = -(servicio.getTasaLlegada()) * Math.log(1 - rnd);
+        double proxLlegada = reloj + tiempo;
 
-   // }
-
-   // private double calcularProximoEvento(){    }
+        return new double[]{rnd, tiempo, proxLlegada};
+   }
 
     public List<Object[]> getResultados() {
         return resultados;

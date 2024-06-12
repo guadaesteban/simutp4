@@ -56,6 +56,9 @@ public class VentanaResultados extends JFrame {
 
         tablaResultados.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
+
+
+
         for (Object[] fila : simulacion.getResultados()) {
             modelo.addRow(fila);
         }
@@ -98,5 +101,4 @@ public class VentanaResultados extends JFrame {
 
         pack();
     }
-
 }
