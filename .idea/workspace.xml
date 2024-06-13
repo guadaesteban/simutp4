@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="500e125a-dbe8-4c52-9973-345e4bec4498" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Servicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Servicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Simulacion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Simulacion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/VentanaResultados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/VentanaResultados.java" afterDir="false" />
     </list>
@@ -43,7 +45,8 @@
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW&quot;: &quot;true&quot;,
     &quot;UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH&quot;: &quot;251&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Usuario/Desktop/UTN/tp4sim&quot;
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Usuario/Desktop/UTN/tp4sim&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

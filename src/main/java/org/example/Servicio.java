@@ -80,4 +80,6 @@ public class Servicio {
     public void setTiempoTotal(double tiempoTotal) {
         this.tiempoTotal = tiempoTotal;
     }
+
+
 }

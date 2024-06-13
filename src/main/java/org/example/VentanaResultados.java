@@ -34,19 +34,18 @@ public class VentanaResultados extends JFrame {
             }
         }
 
-        String[] tiposServidores = {"PL", "DL"};
-        int[] numServidores = {3, 2};
-
-        for (int i = 0; i < tiposServidores.length; i++) {
-            for (int j = 1; j <= numServidores[i]; j++) {
-                columnasList.add(tiposServidores[i] + " S" + j + " estado");
-                columnasList.add(tiposServidores[i] + " S" + j + " rnd Duracion");
-                columnasList.add(tiposServidores[i] + " S" + j + " duracion");
-                columnasList.add(tiposServidores[i] + " S" + j + " fin de atencion");
+        // Añadir columnas para los servidores de cada servicio
+        for (Servicio servicio : simulacion.getServicios()) {
+            int numServidores = servicio.getServidores().length;
+            for (int j = 1; j <= numServidores; j++) {
+                columnasList.add(servicio.getTipo() + " S" + j + " estado");
+                columnasList.add(servicio.getTipo() + " S" + j + " rnd Duracion");
+                columnasList.add(servicio.getTipo() + " S" + j + " duracion");
+                columnasList.add(servicio.getTipo() + " S" + j + " fin de atencion");
             }
-            columnasList.add(tiposServidores[i] + " cola");
-            columnasList.add(tiposServidores[i] + " tiempo ocupado");
-            columnasList.add(tiposServidores[i] + " tiempo total");
+            columnasList.add(servicio.getTipo() + " cola");
+            columnasList.add(servicio.getTipo() + " tiempo ocupado");
+            columnasList.add(servicio.getTipo() + " tiempo total");
         }
         String[] columnas = columnasList.toArray(new String[0]);
 
@@ -60,6 +59,7 @@ public class VentanaResultados extends JFrame {
             String evento = (String) fila[0];
             double reloj = (double) fila[1];
             double[][] llegadas = (double[][]) fila[2];
+            List<Servicio> serviciosList = (List<Servicio>) fila[3];
 
             Object[] filaTabla = new Object[columnas.length];
             filaTabla[0] = evento;
@@ -67,12 +67,28 @@ public class VentanaResultados extends JFrame {
 
             int colIndex = 2;
             for (double[] llegada : llegadas) {
-                filaTabla[colIndex++] = llegada[0]; // RND
-                filaTabla[colIndex++] = llegada[1]; // Tiempo
-                filaTabla[colIndex++] = llegada[2]; // Próxima Llegada
+                filaTabla[colIndex++] = String.format("%.4f", llegada[0]); // RND
+                filaTabla[colIndex++] = String.format("%.4f", llegada[1]); // Tiempo
+                filaTabla[colIndex++] = String.format("%.4f", llegada[2]); // Próxima Llegada
             }
+
+            colIndex = 2 + servicios.length * subColumnas.length;
+            for (Servicio servicio : serviciosList) {
+                for (Servidor servidor : servicio.getServidores()) {
+                    filaTabla[colIndex++] = servidor.getEstado();
+                    filaTabla[colIndex++] = ""; // Placeholder para rnd Duracion
+                    filaTabla[colIndex++] = ""; // Placeholder para duracion
+                    filaTabla[colIndex++] = ""; // Placeholder para fin de atencion
+                }
+                // Asignamos valores para cola, tiempo ocupado y tiempo total
+                filaTabla[colIndex++] = servicio.getCola();
+                filaTabla[colIndex++] = String.format("%.4f", servicio.getTiempoOcupado());
+                filaTabla[colIndex++] = String.format("%.4f", servicio.getTiempoTotal());
+            }
+
             modelo.addRow(filaTabla);
         }
+
 
         scrollPane.setViewportView(tablaResultados);
         scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);

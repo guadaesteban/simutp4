@@ -64,17 +64,19 @@ public class Simulacion {
         int cantServicios = servicios.size();
         double[][] llegadas = new double[cantServicios][3];
 
+
         for (int i = 0; i < cantServicios; i++) {
             llegadas[i] = calcularProximoEvento(reloj, servicios.get(i));
+
         }
 
-        resultados.add(new Object[]{evento, reloj, llegadas});
+        resultados.add(new Object[]{evento, reloj, llegadas, servicios});
 
     }
 
    private double[] calcularProximoEvento(double reloj, Servicio servicio){
         double rnd = Math.random();
-        double tiempo = -(servicio.getTasaLlegada()) * Math.log(1 - rnd);
+        double tiempo = (-servicio.getTasaLlegada()) * Math.log(1 - rnd);
         double proxLlegada = reloj + tiempo;
 
         return new double[]{rnd, tiempo, proxLlegada};
@@ -83,4 +85,6 @@ public class Simulacion {
     public List<Object[]> getResultados() {
         return resultados;
     }
+
+    public List<Servicio> getServicios() { return servicios;    }
 }
