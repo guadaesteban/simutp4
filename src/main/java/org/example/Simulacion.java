@@ -66,7 +66,7 @@ public class Simulacion {
 
 
         for (int i = 0; i < cantServicios; i++) {
-            llegadas[i] = calcularProximoEvento(reloj, servicios.get(i));
+            llegadas[i] = calcularProximaLlegada(reloj, servicios.get(i));
 
         }
 
@@ -74,7 +74,7 @@ public class Simulacion {
 
     }
 
-   private double[] calcularProximoEvento(double reloj, Servicio servicio){
+   private double[] calcularProximaLlegada(double reloj, Servicio servicio){
         double rnd = Math.random();
         double tiempo = (-servicio.getTasaLlegada()) * Math.log(1 - rnd);
         double proxLlegada = reloj + tiempo;
