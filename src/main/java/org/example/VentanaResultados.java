@@ -17,7 +17,7 @@ public class VentanaResultados extends JFrame {
 
         setTitle("Resultados de la Simulación");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setSize(800, 600);
+        setSize(1000, 600);
         setLocationRelativeTo(null);
 
         List<String> columnasList = new ArrayList<>();
@@ -112,7 +112,7 @@ public class VentanaResultados extends JFrame {
                 layout.createParallelGroup(GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
                                 .addContainerGap()
-                                .addComponent(outputPanel, GroupLayout.DEFAULT_SIZE, 780, Short.MAX_VALUE)
+                                .addComponent(outputPanel, GroupLayout.DEFAULT_SIZE, 980, Short.MAX_VALUE)
                                 .addContainerGap())
         );
         layout.setVerticalGroup(
